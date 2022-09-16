@@ -1,10 +1,14 @@
 // app.js
 
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
 
-app.get('/', (req, res) => res.send('Server running on port 8082'));
+// Connect Database
+connectDB();
+
+app.get('/', (req, res) => res.send('Hello world!'));
 
 const port = process.env.PORT || 8082;
 

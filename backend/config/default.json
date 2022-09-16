@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+      "mongodb+srv://test:test@cluster0.qknpk97.mongodb.net/test"
+}
