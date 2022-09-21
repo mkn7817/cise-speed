@@ -1,0 +1,38 @@
+{
+  "name": "cise-speed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "heroku-prebuild": "npm install -g serve",
+    "start": "node app.js",
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client intstall" : "/frontend && npm install",
+    "client build" : "/frontend && npm build",
+    "heroku-postbuild": " npm run client install && npm run client build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkn7817/cise-speed.git"
+  },
+  "author": "vinnie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkn7817/cise-speed/issues"
+  },
+  "homepage": "https://github.com/mkn7817/cise-speed#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
