@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines" : {
+    "npm" : "8.x",
+    "node" : "16.x"
+  },
   "scripts": {
     "heroku-prebuild": "npm install -g serve",
     "start": "node app.js",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client intstall" : "/frontend && npm install",
-    "client build" : "/frontend && npm build",
+    "client intstall" : "cd frontend && npm install",
+    "client build" : "cd frontend && npm run build",
     "heroku-postbuild": " npm run client install && npm run client build"
   },
   "repository": {
