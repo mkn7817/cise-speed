@@ -60,19 +60,21 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import CreateArticle from './components/CreateArticle';
-import ShowBookList from './components/ShowBookList';
-import ShowBookDetails from './components/ShowBookDetails';
-import UpdateBookInfo from './components/UpdateBookInfo';
+import ShowArticleList from './components/ShowArticleList';
+import ShowArticleDetails from './components/ShowArticleDetails';
+import UpdateArticleInfo from './components/UpdateArticleInfo';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Route exact path='/' component={ShowBookList} />
-          <Route path='/create-article' component={CreateArticle} />
-          <Route path='/edit-book/:id' component={UpdateBookInfo} />
-          <Route path='/show-book/:id' component={ShowBookDetails} />
+          <Routes>
+          <Route exact path='/' element={<ShowArticleList/>} > </Route>
+          <Route path='/create-book' element={<CreateArticle/>} > </Route>
+          <Route path='/edit-book/:id' element={<UpdateArticleInfo/>} > </Route>
+          <Route path='/show-book/:id' element={<ShowArticleDetails/>} > </Route>
+          </Routes>
         </div>
       </Router>
     );
